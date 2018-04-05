@@ -1,10 +1,11 @@
 from ircbot import bot
 
-@bot.hook
-def message_hook(bot, channel, sender, message):
-    if "\o/" in message:
+@bot.hook()
+def highfive_hook(bot, channel, sender, message):
+    print("test")
+    if message == "\o/":
         bot.message(channel, "\o/")
-    elif "o/" in message:
+    elif message == "o/":
         bot.message(channel, "\o")
-    elif "\o" in message:
+    elif message == "\o":
         bot.message(channel, "o/")
