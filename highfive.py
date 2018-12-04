@@ -8,4 +8,6 @@ def highfive_hook(bot, channel, sender, message):
         bot.ctcp(channel, "ACTION")
     elif message == "\o":
         bot.message(channel, "o/")
-    
+    elif "👋" in message:
+        bot.message(channel, "o/")
+
